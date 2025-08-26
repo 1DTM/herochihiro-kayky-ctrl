@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+    width: 90vw;
+    height: 93.6vh;
+    background: linear-gradient(130deg, #628e75 0.66%, #1a4855 83.32%);
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px;
+}
+
+.logo{
+    display: flex;
+    margin-right: 500px;
+}
+
+.icons {
+  display: flex;
+  padding-right: 90px;
+  gap: 29px;
+}
+nav i {
+  font-size: 24px;
+  color: white;
+}
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.title {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+}
+
+.title h2 {
+  color: #f9f9f9;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.title h1 {
+  width: 445px;
+  color: #f9f9f9;
+  font-family: Poppins;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 109%; /* 74.12px */
+}
+
+.title p {
+    padding-top: 25px;
+    padding-bottom: 46px;
+  width: 445px;
+  color: #f9f9f9;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 28.8px */
+}
+
+.buttons {
+    font-style: normal;
+  display: flex;
+  gap: 20px;
+}
+
+.buttons button {
+  width: 225px;
+  height: 45px;
+  transform: skewX(-20deg);
+  font-size: 18px;
+}
+.button1 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  background-color: #658e76;
+  gap: 5px;
+  border: none;
+  color: white;
+}
+
+.button2 {
+  border: 1px solid #658e76;
+  background: none;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+
+    nav{
+        padding: 0;
+        display: flex;
+        gap: 0px;
+        justify-content: space-evenly;
+    }
+
+    nav .icons{
+        margin-right: 900px;
+    }
+}
