@@ -2,121 +2,220 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
 }
 
 body {
-    width: 90vw;
-    height: 93.6vh;
-    background: linear-gradient(130deg, #628e75 0.66%, #1a4855 83.32%);
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(130deg, #628e75 0.66%, #1a4855 83.32%);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 60px;
+  margin-bottom: 2rem;
 }
 
-.logo{
-    display: flex;
-    margin-right: 500px;
+.logo {
+  max-width: 120px;
 }
 
 .icons {
   display: flex;
-  padding-right: 90px;
-  gap: 29px;
+  gap: 1.5rem;
 }
+
 nav i {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: white;
+  transition: transform 0.3s ease;
 }
+
+nav i:hover {
+  transform: scale(1.1);
+}
+
 main {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
 }
 
 .title {
-  padding: 100px;
   display: flex;
   flex-direction: column;
-  height: 340px;
+  max-width: 600px;
+  text-align: center;
+  align-items: center;
 }
 
 .title h2 {
   color: #f9f9f9;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  margin-bottom: 0.8rem;
 }
 
 .title h1 {
-  width: 445px;
+  width: 300px;
   color: #f9f9f9;
-  font-family: Poppins;
-  font-size: 68px;
-  font-style: normal;
+  font-size: 2.5rem;
   font-weight: 900;
-  line-height: 109%; /* 74.12px */
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
 .title p {
-    padding-top: 25px;
-    padding-bottom: 46px;
   width: 445px;
   color: #f9f9f9;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 180%; /* 28.8px */
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
 }
 
 .buttons {
-    font-style: normal;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .buttons button {
-  width: 225px;
-  height: 45px;
+  padding: 0.9rem 1.8rem;
   transform: skewX(-20deg);
-  font-size: 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 200px;
+  transition: all 0.3s ease;
 }
+
 .button1 {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #658e76;
-  gap: 5px;
+  gap: 0.5rem;
   border: none;
   color: white;
 }
 
+.button1:hover {
+  background-color: #577a64;
+}
+
+.button1 img {
+  transform: skewX(20deg);
+}
+
 .button2 {
-  border: 1px solid #658e76;
+  border: 2px solid #658e76;
   background: none;
   color: white;
 }
 
-@media screen and (max-width: 900px) {
+.button2:hover {
+  background-color: rgba(101, 142, 118, 0.2);
+}
 
-    nav{
-        padding: 0;
-        display: flex;
-        gap: 0px;
-        justify-content: space-evenly;
-    }
+.img {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  order: -1;
+}
 
-    nav .icons{
-        margin-right: 900px;
-    }
+.img img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+@media screen and (min-width: 900px) {
+  body {
+    padding: 2rem 3rem;
+    justify-content: flex-start;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .title {
+    text-align: left;
+    align-items: flex-start;
+    flex: 1;
+    order: -1;
+  }
+
+  .img {
+    flex: 1;
+    order: 2;
+  }
+
+  .buttons {
+    justify-content: flex-start;
+  }
+
+  .img img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title h1 {
+    font-size: 3.2rem;
+  }
+
+  .title h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .img {
+    order: -2;
+  }
 }
